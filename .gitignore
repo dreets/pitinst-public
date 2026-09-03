@@ -2,6 +2,9 @@
 models/*
 docker/models/*
 logs/*
+!models/.gitkeep
+!docker/models/.gitkeep
+!logs/.gitkeep
 
 # Data is too large to be stored in the repository, but links to download it are provided in the README.
 data/annotations/*
@@ -11,6 +14,13 @@ data/osats/*
 data/segmentation/*
 data/tracking/*
 data/videos/*
+!data/annotations/.gitkeep
+!data/frames/.gitkeep
+!data/kinematics/.gitkeep
+!data/osats/.gitkeep
+!data/segmentation/.gitkeep
+!data/tracking/.gitkeep
+!data/videos/.gitkeep
 
 # Coding environments not needed in the repository.
 .venv/
