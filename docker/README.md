@@ -11,10 +11,11 @@ Requires a CUDA-capable GPU on the host with the [NVIDIA Container Toolkit](http
 
 ```bash
 docker run --rm --gpus all \
-    -v /path/to/inputs:/app/inputs \
-    -v /path/to/models:/app/models \
-    -v /path/to/outputs:/app/outputs \
-    pitinst-pipeline --str_video my_video
+  -v "$(pwd)/inputs:/app/inputs" \
+  -v "$(pwd)/models:/app/models" \
+  -v "$(pwd)/outputs:/app/outputs" \
+  -u "$(id -u):$(id -g)" \
+  pitinst-pipeline:latest
 ```
 
 Any flag accepted by `pipeline.py` (see `python pipeline.py --help`) can be passed after the image name,

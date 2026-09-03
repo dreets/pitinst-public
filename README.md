@@ -40,7 +40,11 @@ If you use this software in your research, please cite it as follows:
 - The code is written for Python 3.12.0 with CUDA 12.1
 - Training neural networks use PyTorch Lightning and MMseg.
 - All executable code can be run via command-line (via argparse), and examples are given at the top of each script.
-- A docker is provided to run the entire pipeline, to predict OSATS for a given video using the trained models (see docker/).
+
+# Docker
+- A docker is provided to run the entire pipeline, to predict OSATS for a given video using the trained models (see docker/ for more details).
+- Models in .onnx format can download from: https://huggingface.co/drdreets/PitInst
+- An example video input and video output is given within the docker
 
 # Coding standards
 The following modern Python (3.10+) coding standards shall be adhered to:
@@ -70,7 +74,7 @@ root/
 |  \- videos/: contains the videos (placeholder)
 |- docker/
 |  |- inputs/: contains the video to run the models on (sample video provided)
-|  |- models/: contains the models (download from: https://huggingface.co/drdreets/PitInst)
+|  |- models/: contains the models
 |  |- outputs/: contains the predictions as a .csv and .mp4 overlay
 |- logs/: contains the tensorboard logs of the models during training
 |- models/: contains the models during training
