@@ -1,0 +1,19 @@
+# Models are too large to be stored in the respository, but links to download them are provided in the README.
+models/*
+docker/models/*
+logs/*
+
+# Data is too large to be stored in the repository, but links to download it are provided in the README.
+data/annotations/*
+data/frames/*
+data/kinematics/*
+data/osats/*
+data/segmentation/*
+data/tracking/*
+data/videos/*
+
+# Coding environments not needed in the repository.
+.venv/
+.vscode/
+scripts/__pycache__/
+scratch/__pycache__/
