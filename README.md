@@ -64,16 +64,16 @@ root/
 |  |- annotations/: contains the video annotations as .csv (placeholder)
 |  |- frames/: contains the de-framed videos at 1fps (placeholder)
 |  |- osats/: contains the final osats predictions as .csv (placeholder)
-|  |- results/: contains the classification & segmentation model evaluations after training 
-|  |- segmentation/: contains the predicted video annotations as .csv (1fps)
-|  |- tracking/: contains the predicted video annotations as .csv (25fps)
+|  |- results/: contains the classification & segmentation model evaluations after training (placeholder)
+|  |- segmentation/: contains the predicted video annotations as .csv (1fps, placeholder)
+|  |- tracking/: contains the predicted video annotations as .csv (25fps, placeholder)
 |  \- videos/: contains the videos (placeholder)
 |- docker/
-|  |- inputs/: contains the video to run the models on (placeholder)
-|  |- models/: contains the models (download from: (placeholder))
+|  |- inputs/: contains the video to run the models on (sample video provided)
+|  |- models/: contains the models (download from: https://huggingface.co/drdreets/PitInst)
 |  |- outputs/: contains the predictions as a .csv and .mp4 overlay
 |- logs/: contains the tensorboard logs of the models during training
-|- models/: contains the models during training and existing models (placeholder)
+|- models/: contains the models during training
 |- sample/: contains sample video input and output (10s video)
 \- scripts/: contains all scripts for model training and running (see below)
 ```

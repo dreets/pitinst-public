@@ -18,11 +18,12 @@ docker run --rm --gpus all \
 ```
 
 Any flag accepted by `pipeline.py` (see `python pipeline.py --help`) can be passed after the image name,
-e.g. `--int_fps 30 --int_clip 5`.
+e.g. `--int_fps 25 --int_clip 5`.
 
 ## Notes
-- `models/` (~2GB: `mask2former.onnx`, `sam2_encoder.onnx`, `sam2_decoder.onnx`, `moco_surg.torch`, `*.joblib`)
+- `models/` (~2GB: `mask2former.onnx`, `sam2_encoder.onnx`, `sam2_decoder.onnx`, `moco_surg.torch`, `*.joblib`) 
   and `inputs/` (source videos) are **not** baked into the image — mount them as volumes at runtime so the
   image stays small and doesn't need rebuilding when models/videos change.
+- Models can be downloaded here: https://huggingface.co/drdreets/PitInst
 - If `--str_video` is omitted, the first `.mp4` file found under `/app/inputs` is used.
 - Output CSVs and the annotated overlay video are written to `/app/outputs`.
